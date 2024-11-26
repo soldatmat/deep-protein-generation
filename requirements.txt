@@ -1,15 +1,15 @@
 backcall==0.1.0
 cycler==0.10.0
 decorator==4.3.0
-h5py==2.8.0
+h5py==2.8.0 # Error
 ipython==6.4.0
 ipython-genutils==0.2.0
 jedi==0.12.1
 Keras==2.1.2
 kiwisolver==1.0.1
-matplotlib==2.2.2
-numpy==1.14.5
-pandas==0.23.1
+matplotlib==2.2.2 # Error
+numpy==1.14.5 # "TypeError: CCompiler_spawn() got an unexpected keyword argument 'env'" caused by incompatibility of numpy and Python versions.
+pandas==0.23.1 # Error
 parso==0.3.1
 pexpect==4.6.0
 pickleshare==0.7.4
@@ -20,10 +20,10 @@ pyparsing==2.2.0
 python-dateutil==2.7.3
 pytz==2018.4
 PyYAML==3.12
-scipy==1.1.0
+scipy==1.1.0 # requires imp, which is discontinued after Python 3.11
 seaborn==0.9.0
 simplegeneric==0.8.1
-tensorflow==1.0.0
+tensorflow==1.0.0 # Error
 six==1.11.0
 tqdm==4.23.4
 traitlets==4.3.2
