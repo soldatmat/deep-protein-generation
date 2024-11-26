@@ -48,7 +48,7 @@ print("Using input dimension", input_dim)
 model = MSAVAE(original_dim=input_dim, latent_dim=10)
 
 # (Optionally) define callbacks
-callbacks = [CSVLogger("output/logs/msavae-" + data_name + ".aln-fasta.csv")]
+callbacks = [CSVLogger("output/logs/msavae-" + data_name + ".csv")]
 
 if save_all_epochs:
     callbacks.append(
@@ -71,4 +71,4 @@ model.VAE.fit_generator(generator=train_gen,
                         callbacks=callbacks)
 
 if not save_all_epochs:
-    model.save_weights("output/weights/msavae-" + data_name + ".aln-fasta.h5")
+    model.save_weights("output/weights/msavae-" + data_name + ".h5")
