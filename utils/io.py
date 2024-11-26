@@ -20,6 +20,7 @@ def read_gzfasta(filepath, output_arr=False, encoding='utf-8'):
     with gzip.open(filepath, 'rb') as fin:
         file_content = fin.read().decode(encoding)
         lines = file_content.split('\n')
+        lines = [line.replace('\r', '') for line in lines] # remove carrige return characters
         for line in lines:
             if line:
                 if line[0] == '>':
