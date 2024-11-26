@@ -2,3 +2,6 @@ notebooks/
 protenv/
 local_scripts/
 **/**/local_*
+
+# Python
+__pycache__
