@@ -8,7 +8,7 @@ from utils.io import output_fasta
 def main(weights_file, msa=True, num_samples=3000, output_file=None, model_kwargs=None):
 
     if output_file is None:
-        base_name = weights_file.split('/')[-1].split('.')[0]
+        base_name = '.'.join(weights_file.split('/')[-1].split('.')[0:-1])
         output_file = 'output/generated_sequences/{}_samples.fa'.format(base_name)
 
     if model_kwargs is None:
